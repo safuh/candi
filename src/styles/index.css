@@ -1,0 +1,136 @@
+main {
+	margin: auto;
+	padding: 1rem;
+	width: 100%;
+	height: 100%;
+	line-height: 1.6;
+}
+.main{
+	display: grid;
+	grid-template-areas: 
+	'header'
+	'content'
+	'img'
+	'footer';
+	
+}
+.header{
+	width: 100%;
+	margin-bottom: 3.5%;
+	grid-area: header;
+}
+.content{
+	grid-area: content;
+	display: grid;
+	grid-template-areas: 'inner'
+	'started';
+	place-items: center;
+	font-style: oblique;
+
+}
+.started{
+	border-radius: 5px 5px 5px 5px;
+	text-align: center;
+	padding: 2.5%;
+	margin-top: -5%;
+	background-color: #1b61e4;
+}
+.img{grid-area: img;}
+.footer{
+	grid-area: footer;
+}
+img{
+	max-height: 100%;
+	max-width: 100%;
+}
+.inner h2{
+	color: #6495ed;
+}
+.salute {
+	margin-bottom: 0px;
+	border-radius: 5px 5px 0px 0px;
+	text-align: center;
+	width:100%;
+	background-color: #6495ed;
+	color: white;
+}
+.text {
+	border-top-style: solid;
+	border-color: white;
+	margin-top: 0px;
+	text-align: justify;
+	width:100%;
+	border-radius: 0px 0px 5px 5px;
+	color: black;
+	background-image: linear-gradient(to bottom right, #bbd0f7, #1b61e4);
+
+}
+.text code{
+	background-image: linear-gradient(to bottom right, black,red);
+	background-size: 100%;	
+	background-repeat: repeat;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color:transparent;
+	-moz-background-clip: text;
+	-moz-text-fill-color:transparent;
+
+}
+.started a{
+	color: white;
+}
+.inner{
+	grid-area: inner;
+	margin-bottom: 0;
+}
+.inner p{
+	padding-left: 5%;
+	padding-right: 5%;
+}
+.inner h2{
+	padding-left: 5%;
+	padding-right: 5%;
+}
+.back h2{
+	background-color: #bbd0f7;
+	color: #6495ed;
+}
+.back div{
+	border-top-style: solid;
+	border-color: white;
+	margin-top: 0px;
+	text-align: center;
+	width:100%;
+	border-radius: 0px 0px 5px 5px;
+	color: black;
+	background-color: #6495ed;
+	color: #6495ed;
+}
+.back {
+	-ms-transform: rotate(2.5deg); /* IE 9 */
+	-webkit-transform: rotate(2.5deg); /* Safari */
+	transform: rotate(2.5deg);
+}
+.out{
+	-ms-transform: rotate(0deg); /* IE 9 */
+	-webkit-transform: rotate(0deg); /* Safari */
+	transform: rotate(0deg);
+}
+
+@media only screen and (min-width: 600px) {
+    /* For tablets: */
+}
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .main{
+    	display: grid;
+		grid-template-areas: 'header header header header header header header header header header '
+		'content content content content content content content content img img' 
+		'footer footer footer footer footer footer footer footer footer footer';
+	}
+	.content{
+		border-radius: 5px;
+		grid-area: content;
+	}
+	
+	
+}

@@ -1,0 +1,57 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/index.css';
+const text = '<May the code be with you/>';
+//'header header header header header header header header header header'<img src="im.png"></img>
+---
+
+<Layout title="Codes And I">
+	
+	<main class="main">
+		
+		<div class="header">
+		<Nav/>
+				
+	</div>
+		<div class="content ">
+			<div class="back inner">
+				<h2 class="salute">Welcome to Codes and I</h2>
+				<div>
+					<p>Hello World! Let's code our way into the future!
+					<br/><br/>
+					<a href="/blogs"><strong>Talk is cheap, </strong>I'll show you the code</a>
+					<br/>
+					<br/>
+					<code>{text}</code>
+					</p>
+				</div>
+				
+			</div>
+			<div class="out inner">
+				<h2 class="salute">Welcome to Codes and I</h2>
+				<div class="text">
+					<p>Hello World! Let's code our way into the future!
+					<br/>View our <a href="/services">Services</a><br/>
+					<a href="/blogs"><strong>Talk is cheap, </strong>I'll show you the code</a>
+					<br/>
+					<a href="/blogs">Read our Blog</a><br/>
+					<code>{text}</code>
+					</p>
+				</div>
+				
+			</div>
+			<!--div class="started">
+				<b><a href="/services">Get Started!</a></b>
+			</div-->
+		</div>
+		<div class="img">
+			<img src="im.png"></img>
+		</div>
+		<footer class="footer">
+			<Footer/>
+		</footer>
+		
+	</main>
+</Layout>
