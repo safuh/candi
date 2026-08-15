@@ -1,20 +1,84 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
-import '../styles/services.css';
+import Footer from '../components/Footer.astro';
+import '../styles/blogs.css';
 ---
-<Layout>
-	<main class="main">
-		<div class="header">
-			<Nav/>
-		</div>
-		<div class="menu">
-			<p>Blogs</p>
-		</div>
-		<div class="content">
-			<p>Blog Description</p>
-		</div>
-		<footer class="footer"></footer>
-	</main>
 
+<Layout title="Engineering Work — Safu" description="Selected backend, AI, machine learning, and quantitative engineering projects by Safu Harry.">
+	<main class="blog-page">
+		<Nav />
+
+		<header class="blog-hero">
+			<p class="eyebrow">Engineering Journal · Projects · Architecture</p>
+			<h1>Work built from <span>first principles.</span></h1>
+			<p>
+				These are not technology demos presented as finished products. They are engineering projects used to
+				explore architecture, reliability, security, AI integration, data systems, and reusable software foundations.
+			</p>
+		</header>
+
+		<section class="project-grid" aria-label="Selected projects">
+			<article class="project-card">
+				<div class="project-card__meta"><span>01 · Backend Architecture</span><span>Foundation</span></div>
+				<h2>FastApiBackbone</h2>
+				<p class="project-card__lede">
+					A production-oriented, reusable Python backend foundation built around FastAPI. The project addresses the
+					engineering concerns that appear after the HTTP layer: configuration, persistence, migrations, lifecycle,
+					logging, health checks, dependency boundaries, and testable infrastructure.
+				</p>
+				<div class="project-card__architecture">FastAPI → API routers → application services
+					↓
+				repository contracts → infrastructure
+					↓
+				SQLAlchemy 2.x ↔ PostgreSQL
+					↓
+				Alembic migrations</div>
+				<div class="project-card__tags">
+					<span>Python</span><span>FastAPI</span><span>SQLAlchemy 2.x</span><span>PostgreSQL</span><span>Alembic</span><span>Pydantic</span><span>structlog</span><span>Async I/O</span>
+				</div>
+				<a class="project-card__link" href="https://github.com/safuh/FastApiBackbone" target="_blank" rel="noopener noreferrer">Inspect the architecture →</a>
+			</article>
+
+			<article class="project-card">
+				<div class="project-card__meta"><span>02 · AI Systems</span><span>In Progress</span></div>
+				<h2>PAssist</h2>
+				<p class="project-card__lede">
+					A provider-agnostic AI operating platform designed as a durable backend for models, agents, tools,
+					retrieval, memory, authenticated users, and future multi-user workspaces. The system treats the AI
+					provider as an adapter rather than coupling the application to a single model vendor.
+				</p>
+				<div class="project-card__architecture">Identity → JWT authentication → sessions
+					↓
+				FastAPI application → domain modules
+					↓
+				AI provider contract → Ollama / compatible APIs
+					↓
+				SQLAlchemy 2.x → Alembic → PostgreSQL</div>
+				<div class="project-card__tags">
+					<span>Python</span><span>FastAPI</span><span>JWT</span><span>Argon2</span><span>SQLAlchemy</span><span>PostgreSQL</span><span>Ollama</span><span>LLMs</span><span>RAG</span><span>Tool Calling</span>
+				</div>
+				<a class="project-card__link" href="https://github.com/safuh/Passist" target="_blank" rel="noopener noreferrer">Explore PAssist →</a>
+			</article>
+		</section>
+
+		<section class="engineering-note" aria-labelledby="note-title">
+			<p class="eyebrow">The connection</p>
+			<h2 id="note-title">One foundation, multiple domains.</h2>
+			<p>
+				FastApiBackbone establishes the reusable backend substrate: asynchronous application structure, database
+				lifecycle, migrations, configuration, logging, and clean extension points. PAssist demonstrates how that
+				foundation can support a substantially more complex domain with identity, security, AI provider abstraction,
+				conversations, tools, documents, memory, and multi-tenancy boundaries.
+			</p>
+			<p>
+				This is the engineering direction behind the rest of the portfolio: build infrastructure that remains stable,
+				then compose domain-specific systems on top of it.
+			</p>
+		</section>
+
+		<footer class="footer">
+			<Footer />
+		</footer>
+	</main>
 </Layout>
