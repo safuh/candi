@@ -1,8 +1,8 @@
 # C_and_I
 
-> **Software engineering across backend systems, AI, machine learning, quantitative systems, and modern web applications.**
+**Software engineering across backend systems, AI, machine learning, quantitative systems, and modern web applications.**
 
-urlLive sitehttps://candi.netlify.app/ · urlSource repositoryhttps://github.com/safuh/candi
+url Live site https://candi-ochre.vercel.app/ · url Source repository https://github.com/safuh/candi
 
 C_and_I is a personal engineering portfolio and technical workspace. It presents selected work, engineering capabilities, experiments, and technical notes across software engineering, artificial intelligence, machine learning, and quantitative systems.
 
