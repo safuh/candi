@@ -10,8 +10,13 @@ import '../styles/blogs.css';
 		<Nav />
 
 		<header class="blog-hero">
-			<p class="eyebrow">Engineering Journal · Projects · Architecture</p>
-			<h1>Work built from <span>first principles.</span></h1>
+			<div class="blog-hero__identity">
+				<img src="/IMG-20210808-WA0072.jpg" alt="Safu Harry" loading="eager" />
+				<div>
+					<p class="eyebrow">Engineering Journal · Projects · Architecture</p>
+					<h1>Work built from <span>first principles.</span></h1>
+				</div>
+			</div>
 			<p>
 				These are not technology demos presented as finished products. They are engineering projects used to
 				explore architecture, reliability, security, AI integration, data systems, and reusable software foundations.
@@ -29,7 +34,7 @@ import '../styles/blogs.css';
 				</p>
 				<div class="project-card__architecture">FastAPI → API routers → application services
 					↓
-				repository contracts → infrastructure
+					repository contracts → infrastructure
 					↓
 				SQLAlchemy 2.x ↔ PostgreSQL
 					↓
