@@ -13,27 +13,36 @@ import '../styles/blogs.css';
 			<div class="blog-hero__identity">
 				<img src="/IMG-20210808-WA0072.jpg" alt="Safu Harry" loading="eager" />
 				<div>
-					<p class="eyebrow">Engineering Journal · Projects · Architecture</p>
-					<h1>Work built from <span>first principles.</span></h1>
+					<p class="eyebrow">Engineering Journal · Open Source · Architecture</p>
+					<h1>Systems built to be <span>reused.</span></h1>
 				</div>
 			</div>
 			<p>
-				These are engineering projects used to explore architecture, reliability, security, AI integration, data
-				systems, and reusable software foundations. Each project is presented through the engineering problem it solves,
-				the architecture behind it, and the technologies used to implement it.
+				Selected engineering work across backend architecture, AI systems, machine learning, and quantitative
+				development. The focus is not only on applications, but on building software foundations that can be extended,
+				tested, packaged, and reused.
 			</p>
 		</header>
 
 		<section class="project-grid" aria-label="Selected projects">
-			<article class="project-card">
-				<div class="project-card__meta"><span>01 · Backend Architecture</span><span>v0.1.0 Beta</span></div>
+			<article class="project-card project-card--featured">
+				<div class="project-card__meta">
+					<span>01 · Open Source Python Library</span>
+					<span>v0.1.0 · Published</span>
+				</div>
 				<h2>FastApiBackbone</h2>
 				<p class="project-card__lede">
-					A packaged, production-oriented foundation for Python backend projects. It extends FastAPI with the
-					infrastructure concerns required for durable services: environment-driven configuration, async SQLAlchemy,
-					PostgreSQL/SQLite support, Alembic migrations, structured logging, application lifespan management, health
-					probes, and a reusable application factory.
+					A reusable backend foundation for Python services built around FastAPI. Rather than treating FastAPI as the
+				entire backend architecture, FastApiBackbone supplies the surrounding infrastructure required to build durable
+					applications: environment-driven configuration, asynchronous SQLAlchemy, database lifecycle management,
+					Alembic migrations, structured logging, health probes, and a reusable application factory.
 				</p>
+
+				<div class="project-card__callout">
+					<strong>Now available as a Python package.</strong>
+					<span>Installable distribution · semantic versioning · automated build and release workflow</span>
+				</div>
+
 				<div class="project-card__architecture">FastAPI → API composition → application services
 					↓
 				configuration + lifecycle + structured logging
@@ -41,19 +50,24 @@ import '../styles/blogs.css';
 				SQLAlchemy 2.x ↔ PostgreSQL / SQLite
 					↓
 				Alembic migrations</div>
+
 				<div class="project-card__tags">
-					<span>Python</span><span>FastAPI</span><span>SQLAlchemy 2.x</span><span>PostgreSQL</span><span>SQLite</span><span>Alembic</span><span>Pydantic</span><span>structlog</span><span>Async I/O</span>
+					<span>Python</span><span>FastAPI</span><span>SQLAlchemy 2.x</span><span>PostgreSQL</span><span>SQLite</span><span>Alembic</span><span>Pydantic</span><span>structlog</span><span>Async I/O</span><span>PyPI</span>
 				</div>
-				<a class="project-card__link" href="https://github.com/safuh/FastApiBackbone" target="_blank" rel="noopener noreferrer">Inspect the package →</a>
+
+				<div class="project-card__actions">
+					<a class="project-card__link" href="https://github.com/safuh/FastApiBackbone" target="_blank" rel="noopener noreferrer">View source →</a>
+					<a class="project-card__link" href="https://pypi.org/project/fastapi-backbone/" target="_blank" rel="noopener noreferrer">View on PyPI →</a>
+				</div>
 			</article>
 
 			<article class="project-card">
 				<div class="project-card__meta"><span>02 · AI Systems</span><span>Active Development</span></div>
 				<h2>PAssist</h2>
 				<p class="project-card__lede">
-					A provider-agnostic AI operating platform built on the same backend principles. PAssist combines a modular
-					FastAPI service with identity, JWT authentication, persistent conversations, AI provider abstraction, local
-					Ollama integration, retrieval, tools, memory, and extensible domain boundaries.
+					A provider-agnostic AI platform built around the same backend engineering principles. PAssist combines a
+					modular FastAPI service with identity and JWT authentication, persistent conversations, AI provider
+					abstraction, local Ollama integration, retrieval, tools, memory, and extensible domain boundaries.
 				</p>
 				<div class="project-card__architecture">Identity → JWT authentication → sessions
 					↓
@@ -70,18 +84,17 @@ import '../styles/blogs.css';
 		</section>
 
 		<section class="engineering-note" aria-labelledby="note-title">
-			<p class="eyebrow">The connection</p>
+			<p class="eyebrow">The engineering philosophy</p>
 			<h2 id="note-title">Infrastructure first. Domain second.</h2>
 			<p>
-				FastApiBackbone is the reusable backend substrate: asynchronous application structure, database lifecycle,
-				migrations, configuration, logging, health checks, and clean extension points. PAssist demonstrates how that
-				foundation can support a substantially more complex domain with identity, security, AI provider abstraction,
-				conversations, tools, knowledge retrieval, memory, and future multi-user capabilities.
+				FastApiBackbone is the reusable infrastructure substrate: asynchronous application structure, database lifecycle,
+				migrations, configuration, logging, health checks, and clean extension points. It is deliberately domain-neutral
+				so that another Python service can adopt the foundation without inheriting assumptions from a particular product.
 			</p>
 			<p>
-				The distinction matters: FastApiBackbone is intentionally domain-neutral, while PAssist owns product-specific
-				behavior. The result is a reusable engineering foundation that can be carried into other Python backend projects
-				without importing the assumptions of an AI application.
+				PAssist demonstrates the next layer: a concrete application domain built with identity, security, AI provider
+				abstraction, conversations, tools, knowledge retrieval, and memory. Together, the projects show the progression
+				from reusable backend infrastructure to a complex AI-enabled application.
 			</p>
 		</section>
 
