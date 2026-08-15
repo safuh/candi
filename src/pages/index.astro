@@ -3,43 +3,115 @@ import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/index.css';
-const text = '<May the code be with you/>';
-//'header header header header header header header header header header'<img src="im.png"></img>
 ---
 
-<Layout title="Codes And I">
-	
-	<main class="main">
-		
-		<div class="header">
-		<Nav/>
-				
-	</div>
-		<div>
-			
-			<div>
-				<h2>Welcome to Codes and I</h2>
-				<div>
-					<p>Hello World! Let's code our way into the future!
-					<br/>View our <a href="/services">Services</a><br/>
-					<a href="/blogs"><strong>Talk is cheap, </strong>I'll show you the code</a>
-					<br/>
-					<a href="/blogs">Read our Blog</a><br/>
-					<code>{text}</code>
-					</p>
+<Layout title="Safu — Backend, AI & Quantitative Systems Engineer">
+	<main class="site-shell">
+		<Nav />
+
+		<section class="hero" aria-labelledby="hero-title">
+			<div class="hero__content">
+				<p class="eyebrow">Software Engineer · AI · Quantitative Systems</p>
+
+				<h1 id="hero-title">
+					I build <span>software systems</span><br />
+					that turn complex ideas into working products.
+				</h1>
+
+				<p class="hero__summary">
+					I’m Safu, a Python-focused engineer working across backend architecture,
+					AI and machine learning, quantitative systems, and full-stack web development.
+				</p>
+
+				<div class="hero__actions" aria-label="Primary actions">
+					<a class="button button--primary" href="/services">Explore my expertise <span aria-hidden="true">→</span></a>
+					<a class="button button--secondary" href="/blogs">Read the engineering notes</a>
 				</div>
-				
+
+				<div class="hero__stack" aria-label="Primary technology stack">
+					<span>Python</span>
+					<span>FastAPI</span>
+					<span>PostgreSQL</span>
+					<span>AI / LLMs</span>
+					<span>Machine Learning</span>
+					<span>Quant Systems</span>
+				</div>
 			</div>
-			<!--div class="started">
-				<b><a href="/services">Get Started!</a></b>
-			</div-->
-		</div>
-		<div class="img">
-			<img src="im.png"></img>
-		</div>
+
+			<div class="hero__visual" aria-hidden="true">
+				<div class="terminal">
+					<div class="terminal__bar">
+						<span></span><span></span><span></span>
+						<small>~/engineering</small>
+					</div>
+					<div class="terminal__body">
+						<p><span class="prompt">$</span> whoami</p>
+						<p class="output">backend · ai · quant</p>
+						<p><span class="prompt">$</span> stack --primary</p>
+						<p class="output">python fastapi postgresql</p>
+						<p class="output">pytorch ollama pine-script</p>
+						<p><span class="prompt">$</span> status</p>
+						<p class="output output--active">building systems...</p>
+					</div>
+				</div>
+				<div class="hero__orb hero__orb--one"></div>
+				<div class="hero__orb hero__orb--two"></div>
+			</div>
+		</section>
+
+		<section class="focus" aria-labelledby="focus-title">
+			<div class="section-heading">
+				<p class="eyebrow">What I work on</p>
+				<h2 id="focus-title">Engineering across the stack.</h2>
+				<p>From the database layer to intelligent applications and market-data systems.</p>
+			</div>
+
+			<div class="focus-grid">
+				<article class="focus-card">
+					<span class="focus-card__number">01</span>
+					<h3>Backend Engineering</h3>
+					<p>Production-oriented APIs and services with Python, FastAPI, SQLAlchemy, PostgreSQL, migrations, authentication, and modular architecture.</p>
+					<a href="/services#backend">Backend systems <span>→</span></a>
+				</article>
+
+				<article class="focus-card">
+					<span class="focus-card__number">02</span>
+					<h3>AI &amp; Machine Learning</h3>
+					<p>AI applications, LLM integration, RAG, tool calling, local models, deep learning workflows, and model-driven products.</p>
+					<a href="/services#ai">AI engineering <span>→</span></a>
+				</article>
+
+				<article class="focus-card">
+					<span class="focus-card__number">03</span>
+					<h3>Quantitative Systems</h3>
+					<p>Market-data processing, TradingView/Pine Script systems, strategy research, backtesting, risk logic, and model integration.</p>
+					<a href="/services#quant">Quant systems <span>→</span></a>
+				</article>
+			</div>
+		</section>
+
+		<section class="principles" aria-labelledby="principles-title">
+			<div>
+				<p class="eyebrow">Engineering philosophy</p>
+				<h2 id="principles-title">Build the system, not just the feature.</h2>
+			</div>
+			<div class="principles__list">
+				<div><strong>01</strong><span>Architecture before abstraction</span></div>
+				<div><strong>02</strong><span>Data integrity and security by design</span></div>
+				<div><strong>03</strong><span>Automation where it removes operational friction</span></div>
+				<div><strong>04</strong><span>Measure, test, iterate</span></div>
+			</div>
+		</section>
+
+		<section class="closing" aria-labelledby="closing-title">
+			<p class="eyebrow">Explore the work</p>
+			<h2 id="closing-title">Code is the evidence.</h2>
+			<p>Explore the systems, experiments, and engineering notes behind the work.</p>
+			<a class="button button--primary" href="/blogs">View the work <span aria-hidden="true">→</span></a>
+		</section>
+
 		<footer class="footer">
-			<Footer/>
+			<Footer />
 		</footer>
-		
 	</main>
 </Layout>
