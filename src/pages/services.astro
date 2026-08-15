@@ -3,6 +3,139 @@ import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
 import '../styles/services.css';
 import Footer from '../components/Footer.astro';
+const services = [
+    {
+        title: "Backend Engineering",
+        slug: "backend",
+        description:
+            "Designing robust Python backend systems and APIs with an emphasis on security, maintainability, and scalable architecture.",
+
+        capabilities: [
+            "REST API architecture",
+            "Database design",
+            "Authentication & authorization",
+            "Async services",
+            "Data modeling",
+            "Service-layer architecture"
+        ],
+
+        technologies: [
+            "Python",
+            "FastAPI",
+            "Pydantic",
+            "SQLAlchemy",
+            "Alembic",
+            "PostgreSQL",
+            "JWT"
+        ]
+    },
+
+    {
+        title: "Machine Learning",
+        slug: "machine-learning",
+        description:
+            "Developing machine-learning workflows from data preparation and experimentation through model evaluation and application integration.",
+
+        capabilities: [
+            "Data preprocessing",
+            "Feature engineering",
+            "Neural networks",
+            "Time-series modeling",
+            "Transfer learning",
+            "Model evaluation"
+        ],
+
+        technologies: [
+            "Python",
+            "PyTorch",
+            "TensorFlow",
+            "Keras",
+            "NumPy",
+            "Pandas",
+            "Scikit-learn"
+        ]
+    },
+
+    {
+        title: "LLM & AI Engineering",
+        slug: "ai-engineering",
+        description:
+            "Building AI applications that connect language models with data, APIs, documents, and external tools.",
+
+        capabilities: [
+            "RAG pipelines",
+            "Tool calling",
+            "LLM integration",
+            "AI agents",
+            "Embeddings",
+            "Model abstraction",
+            "Local AI systems"
+        ],
+
+        technologies: [
+            "Python",
+            "FastAPI",
+            "Ollama",
+            "LLMs",
+            "RAG",
+            "Vector Search"
+        ]
+    },
+
+    {
+        title: "Quantitative Systems",
+        slug: "quant",
+        description:
+            "Developing data-driven trading and market-analysis systems combining quantitative analysis, automation, and machine learning.",
+
+        capabilities: [
+            "Strategy development",
+            "Backtesting",
+            "Market-data processing",
+            "Technical analysis",
+            "Risk management",
+            "Signal generation",
+            "ML integration"
+        ],
+
+        technologies: [
+            "Python",
+            "NumPy",
+            "Pandas",
+            "Pine Script",
+            "TradingView",
+            "CCXT",
+            "WebSockets"
+        ]
+    },
+
+    {
+        title: "Full-Stack Development",
+        slug: "full-stack",
+        description:
+            "Building complete web applications across frontend, backend, database, and API layers.",
+
+        capabilities: [
+            "Frontend development",
+            "API integration",
+            "Responsive interfaces",
+            "Authentication flows",
+            "Database integration",
+            "Component architecture"
+        ],
+
+        technologies: [
+            "React",
+            "TypeScript",
+            "JavaScript",
+            "Redux",
+            "Tailwind CSS",
+            "Sass",
+            "Bootstrap",
+            "Figma"
+        ]
+    }
+];
 ---
 <Layout>
 	<main class="main">
@@ -11,27 +144,116 @@ import Footer from '../components/Footer.astro';
 		</div>
 		<div class="main">
 			<div class="content">
+				<div class="services-grid">
+    {services.map((service) => (
+        <article class={`service-card ${service.slug}`}>
+
+            <div class="service-card__header">
+                <span class="service-card__index">
+                    {String(services.indexOf(service) + 1).padStart(2, "0")}
+                </span>
+
+                <h2>{service.title}</h2>
+            </div>
+
+            <p class="service-card__description">
+                {service.description}
+            </p>
+
+            <section class="service-card__section">
+                <h3>Capabilities</h3>
+
+                <ul>
+                    {service.capabilities.map((capability) => (
+                        <li>{capability}</li>
+                    ))}
+                </ul>
+            </section>
+
+            <section class="service-card__section">
+                <h3>Technology</h3>
+
+                <div class="technology-list">
+                    {service.technologies.map((technology) => (
+                        <span>{technology}</span>
+                    ))}
+                </div>
+            </section>
+
+        </article>
+    ))}
+</div>
 				<div class="itemholder">
 					<div class="back inner">
 						<div class="heading">
-							Full Stack Dev
+							Back End Dev
 						</div>
 						<div class="service">
-							<p><code>JavaScript, TypeScript, React+Redux</code></p>
-							<p><code>CSS, SaSS, TailwindCSS</code></p>
-							<p><code>Figma,Bootsrap</code></p>
-							<p><code>low code development with bubble.io</code></p>
+							<p><code>Python FastAPI</code></p>
+							<p><code>SQLAlchemy</code></p>
+							<p><code>Alembic</code></p>
+							<p><code>PostgreSQL</code></p>
+							<p><code>JWT Authentication</code></p>
 						</div>
 					</div>
 					<div class="item inner">
 						<div class="heading">
-							Full Stack Dev
+							Back End Dev
 						</div>
 						<div class="service">
-							<p><code>JavaScript, TypeScript, React+Redux</code></p>
-							<p><code>CSS, SaSS, TailwindCSS</code></p>
-							<p><code>Figma,Bootsrap</code></p>
-							<p><code>low code development with bubble.io</code></p>
+							<p><code>Python FastAPI</code></p>
+							<p><code>SQLAlchemy</code></p>
+							<p><code>Alembic</code></p>
+							<p><code>PostgreSQL</code></p>
+							<p><code>JWT Authentication</code></p>
+						</div>
+					</div>
+				</div>
+				<div class="itemholder">
+					<div class="back inner">
+						<div class="heading">
+							Machine Learning
+						</div>
+						<div class="service">
+							<p><code>PyTorch/code></p>
+							<p><code>Tensorfloe</code></p>
+							<p><code>Data preparation and Vectorization with pandas and RAG</code></p>
+							<p><code>Pre-trained model intergration as a sequential layer</code></p>
+						</div>
+					</div>
+					<div class="item inner">
+						<div class="heading">
+							Machine Learning
+						</div>
+						<div class="service">
+							<p><code>PyTorch/code></p>
+							<p><code>Tensorfloe</code></p>
+							<p><code>Data preparation and Vectorization with pandas and RAG</code></p>
+							<p><code>Pre-trained model intergration as a sequential layer</code></p>
+						</div>
+					</div>
+				</div>
+				<div class="itemholder">
+					<div class="back inner">
+						<div class="heading">
+							Quant Systems
+						</div>
+						<div class="service">
+							<p><code>PineScript</code></p>
+							<p><code>Numpy and pandas</code></p>
+							<p><code>Websockets</code></p>
+							<p><code>Model intergration</code></p>
+						</div>
+					</div>
+					<div class="item inner">
+						<div class="heading">
+							Quant Systems
+						</div>
+						<div class="service">
+							<p><code>PineScript</code></p>
+							<p><code>Numpy and pandas</code></p>
+							<p><code>Websockets</code></p>
+							<p><code>Model intergration</code></p>
 						</div>
 					</div>
 				</div>
@@ -41,7 +263,7 @@ import Footer from '../components/Footer.astro';
 							Full Stack Dev
 						</div>
 						<div class="service">
-							<p><code>JavaScript, TypeScript, React+Redux</code></p>
+							<p><code>Python,JavaScript, TypeScript, React+Redux</code></p>
 							<p><code>CSS, SaSS, TailwindCSS</code></p>
 							<p><code>Figma,Bootsrap</code></p>
 							<p><code>low code development with bubble.io</code></p>
@@ -52,55 +274,7 @@ import Footer from '../components/Footer.astro';
 							Full Stack Dev
 						</div>
 						<div class="service">
-							<p><code>JavaScript, TypeScript, React+Redux</code></p>
-							<p><code>CSS, SaSS, TailwindCSS</code></p>
-							<p><code>Figma,Bootsrap</code></p>
-							<p><code>low code development with bubble.io</code></p>
-						</div>
-					</div>
-				</div>
-				<div class="itemholder">
-					<div class="back inner">
-						<div class="heading">
-							Full Stack Dev
-						</div>
-						<div class="service">
-							<p><code>JavaScript, TypeScript, React+Redux</code></p>
-							<p><code>CSS, SaSS, TailwindCSS</code></p>
-							<p><code>Figma,Bootsrap</code></p>
-							<p><code>low code development with bubble.io</code></p>
-						</div>
-					</div>
-					<div class="item inner">
-						<div class="heading">
-							Full Stack Dev
-						</div>
-						<div class="service">
-							<p><code>JavaScript, TypeScript, React+Redux</code></p>
-							<p><code>CSS, SaSS, TailwindCSS</code></p>
-							<p><code>Figma,Bootsrap</code></p>
-							<p><code>low code development with bubble.io</code></p>
-						</div>
-					</div>
-				</div>
-				<div class="itemholder">
-					<div class="back inner">
-						<div class="heading">
-							Full Stack Dev
-						</div>
-						<div class="service">
-							<p><code>JavaScript, TypeScript, React+Redux</code></p>
-							<p><code>CSS, SaSS, TailwindCSS</code></p>
-							<p><code>Figma,Bootsrap</code></p>
-							<p><code>low code development with bubble.io</code></p>
-						</div>
-					</div>
-					<div class="item inner">
-						<div class="heading">
-							Full Stack Dev
-						</div>
-						<div class="service">
-							<p><code>JavaScript, TypeScript, React+Redux</code></p>
+							<p><code>Python, JavaScript, TypeScript, React+Redux</code></p>
 							<p><code>CSS, SaSS, TailwindCSS</code></p>
 							<p><code>Figma,Bootsrap</code></p>
 							<p><code>low code development with bubble.io</code></p>
