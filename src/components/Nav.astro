@@ -1,24 +1,36 @@
 ---
-const heading='<C_and_I/>';
+const heading = '<C_and_I />';
 ---
 
-<div id="heading">
-  <div class="head_links">
-    <h2>
-      <code>{heading}</code>
-    </h2>
-    <p>
-      <a href="#" class="fa fa-facebook"></a>
-      <a href="#" class="fa fa-twitter"></a>
-      <a href="#" class="fa fa-instagram"></a>
-      <a href="#" class="fa fa-linkedin"></a>
-    </p>
-  </div>
-</div>
-<div class="topnav" id="mytopnav">
-  <div id="dropdown">
-    <a href="/">Home</a>
-    <a href="/services">Services</a>
-    <a href="/blogs">Blog</a>
-  </div>
-</div>
+<header class="site-nav">
+	<a class="brand" href="/" aria-label="Codes and I home">
+		<code>{heading}</code>
+	</a>
+
+	<nav aria-label="Primary navigation">
+		<a href="/">Home</a>
+		<a href="/services">Expertise</a>
+		<a href="/blogs">Notes</a>
+	</nav>
+</header>
+
+<style>
+	.site-nav {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 30px;
+		padding: 22px 0;
+		border-bottom: 1px solid rgba(38, 54, 83, .65);
+	}
+	.brand { color: #dce6f8; font-size: 1.05rem; font-weight: 700; }
+	.brand code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+	nav { display: flex; align-items: center; gap: 28px; }
+	nav a { color: #7f8ea7; font-size: .82rem; font-weight: 700; }
+	nav a:hover, .brand:hover { color: #8eb5ff; }
+	@media (max-width: 600px) {
+		.site-nav { padding: 17px 0; }
+		nav { gap: 15px; }
+		nav a { font-size: .74rem; }
+	}
+</style>
