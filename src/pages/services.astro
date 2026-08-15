@@ -145,143 +145,43 @@ const services = [
 		<div class="main">
 			<div class="content">
 				<div class="services-grid">
-    {services.map((service) => (
-        <article class={`service-card ${service.slug}`}>
-
-            <div class="service-card__header">
-                <span class="service-card__index">
-                    {String(services.indexOf(service) + 1).padStart(2, "0")}
-                </span>
-
-                <h2>{service.title}</h2>
-            </div>
-
-            <p class="service-card__description">
-                {service.description}
-            </p>
-
-            <section class="service-card__section">
-                <h3>Capabilities</h3>
-
-                <ul>
-                    {service.capabilities.map((capability) => (
-                        <li>{capability}</li>
-                    ))}
-                </ul>
-            </section>
-
-            <section class="service-card__section">
-                <h3>Technology</h3>
-
-                <div class="technology-list">
-                    {service.technologies.map((technology) => (
-                        <span>{technology}</span>
-                    ))}
-                </div>
-            </section>
-
-        </article>
-    ))}
-</div>
-				<div class="itemholder">
-					<div class="back inner">
-						<div class="heading">
-							Back End Dev
-						</div>
-						<div class="service">
-							<p><code>Python FastAPI</code></p>
-							<p><code>SQLAlchemy</code></p>
-							<p><code>Alembic</code></p>
-							<p><code>PostgreSQL</code></p>
-							<p><code>JWT Authentication</code></p>
-						</div>
-					</div>
-					<div class="item inner">
-						<div class="heading">
-							Back End Dev
-						</div>
-						<div class="service">
-							<p><code>Python FastAPI</code></p>
-							<p><code>SQLAlchemy</code></p>
-							<p><code>Alembic</code></p>
-							<p><code>PostgreSQL</code></p>
-							<p><code>JWT Authentication</code></p>
-						</div>
-					</div>
-				</div>
-				<div class="itemholder">
-					<div class="back inner">
-						<div class="heading">
-							Machine Learning
-						</div>
-						<div class="service">
-							<p><code>PyTorch/code></p>
-							<p><code>Tensorfloe</code></p>
-							<p><code>Data preparation and Vectorization with pandas and RAG</code></p>
-							<p><code>Pre-trained model intergration as a sequential layer</code></p>
-						</div>
-					</div>
-					<div class="item inner">
-						<div class="heading">
-							Machine Learning
-						</div>
-						<div class="service">
-							<p><code>PyTorch/code></p>
-							<p><code>Tensorfloe</code></p>
-							<p><code>Data preparation and Vectorization with pandas and RAG</code></p>
-							<p><code>Pre-trained model intergration as a sequential layer</code></p>
-						</div>
-					</div>
-				</div>
-				<div class="itemholder">
-					<div class="back inner">
-						<div class="heading">
-							Quant Systems
-						</div>
-						<div class="service">
-							<p><code>PineScript</code></p>
-							<p><code>Numpy and pandas</code></p>
-							<p><code>Websockets</code></p>
-							<p><code>Model intergration</code></p>
-						</div>
-					</div>
-					<div class="item inner">
-						<div class="heading">
-							Quant Systems
-						</div>
-						<div class="service">
-							<p><code>PineScript</code></p>
-							<p><code>Numpy and pandas</code></p>
-							<p><code>Websockets</code></p>
-							<p><code>Model intergration</code></p>
-						</div>
-					</div>
-				</div>
-				<div class="itemholder">
-					<div class="back inner">
-						<div class="heading">
-							Full Stack Dev
-						</div>
-						<div class="service">
-							<p><code>Python,JavaScript, TypeScript, React+Redux</code></p>
-							<p><code>CSS, SaSS, TailwindCSS</code></p>
-							<p><code>Figma,Bootsrap</code></p>
-							<p><code>low code development with bubble.io</code></p>
-						</div>
-					</div>
-					<div class="item inner">
-						<div class="heading">
-							Full Stack Dev
-						</div>
-						<div class="service">
-							<p><code>Python, JavaScript, TypeScript, React+Redux</code></p>
-							<p><code>CSS, SaSS, TailwindCSS</code></p>
-							<p><code>Figma,Bootsrap</code></p>
-							<p><code>low code development with bubble.io</code></p>
-						</div>
-					</div>
-				</div>
-				
+			    {services.map((service) => (
+			        <article class={`service-card ${service.slug}`}>
+			
+			            <div class="service-card__header">
+			                <span class="service-card__index">
+			                    {String(services.indexOf(service) + 1).padStart(2, "0")}
+			                </span>
+			
+			                <h2>{service.title}</h2>
+			            </div>
+			
+			            <p class="service-card__description">
+			                {service.description}
+			            </p>
+			
+			            <section class="service-card__section">
+			                <h3>Capabilities</h3>
+			
+			                <ul>
+			                    {service.capabilities.map((capability) => (
+			                        <li>{capability}</li>
+			                    ))}
+			                </ul>
+			            </section>
+			
+			            <section class="service-card__section">
+			                <h3>Technology</h3>
+			
+			                <div class="technology-list">
+			                    {service.technologies.map((technology) => (
+			                        <span>{technology}</span>
+			                    ))}
+			                </div>
+			            </section>
+			
+			        </article>
+			    ))}
 			</div>
 				
 			<footer class="footer">
