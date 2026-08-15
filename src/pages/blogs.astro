@@ -18,40 +18,42 @@ import '../styles/blogs.css';
 				</div>
 			</div>
 			<p>
-				These are not technology demos presented as finished products. They are engineering projects used to
-				explore architecture, reliability, security, AI integration, data systems, and reusable software foundations.
+				These are engineering projects used to explore architecture, reliability, security, AI integration, data
+				systems, and reusable software foundations. Each project is presented through the engineering problem it solves,
+				the architecture behind it, and the technologies used to implement it.
 			</p>
 		</header>
 
 		<section class="project-grid" aria-label="Selected projects">
 			<article class="project-card">
-				<div class="project-card__meta"><span>01 · Backend Architecture</span><span>Foundation</span></div>
+				<div class="project-card__meta"><span>01 · Backend Architecture</span><span>v0.1.0 Beta</span></div>
 				<h2>FastApiBackbone</h2>
 				<p class="project-card__lede">
-					A production-oriented, reusable Python backend foundation built around FastAPI. The project addresses the
-					engineering concerns that appear after the HTTP layer: configuration, persistence, migrations, lifecycle,
-					logging, health checks, dependency boundaries, and testable infrastructure.
+					A packaged, production-oriented foundation for Python backend projects. It extends FastAPI with the
+					infrastructure concerns required for durable services: environment-driven configuration, async SQLAlchemy,
+					PostgreSQL/SQLite support, Alembic migrations, structured logging, application lifespan management, health
+					probes, and a reusable application factory.
 				</p>
-				<div class="project-card__architecture">FastAPI → API routers → application services
+				<div class="project-card__architecture">FastAPI → API composition → application services
 					↓
-					repository contracts → infrastructure
+				configuration + lifecycle + structured logging
 					↓
-				SQLAlchemy 2.x ↔ PostgreSQL
+				SQLAlchemy 2.x ↔ PostgreSQL / SQLite
 					↓
 				Alembic migrations</div>
 				<div class="project-card__tags">
-					<span>Python</span><span>FastAPI</span><span>SQLAlchemy 2.x</span><span>PostgreSQL</span><span>Alembic</span><span>Pydantic</span><span>structlog</span><span>Async I/O</span>
+					<span>Python</span><span>FastAPI</span><span>SQLAlchemy 2.x</span><span>PostgreSQL</span><span>SQLite</span><span>Alembic</span><span>Pydantic</span><span>structlog</span><span>Async I/O</span>
 				</div>
-				<a class="project-card__link" href="https://github.com/safuh/FastApiBackbone" target="_blank" rel="noopener noreferrer">Inspect the architecture →</a>
+				<a class="project-card__link" href="https://github.com/safuh/FastApiBackbone" target="_blank" rel="noopener noreferrer">Inspect the package →</a>
 			</article>
 
 			<article class="project-card">
-				<div class="project-card__meta"><span>02 · AI Systems</span><span>In Progress</span></div>
+				<div class="project-card__meta"><span>02 · AI Systems</span><span>Active Development</span></div>
 				<h2>PAssist</h2>
 				<p class="project-card__lede">
-					A provider-agnostic AI operating platform designed as a durable backend for models, agents, tools,
-					retrieval, memory, authenticated users, and future multi-user workspaces. The system treats the AI
-					provider as an adapter rather than coupling the application to a single model vendor.
+					A provider-agnostic AI operating platform built on the same backend principles. PAssist combines a modular
+					FastAPI service with identity, JWT authentication, persistent conversations, AI provider abstraction, local
+					Ollama integration, retrieval, tools, memory, and extensible domain boundaries.
 				</p>
 				<div class="project-card__architecture">Identity → JWT authentication → sessions
 					↓
@@ -69,16 +71,17 @@ import '../styles/blogs.css';
 
 		<section class="engineering-note" aria-labelledby="note-title">
 			<p class="eyebrow">The connection</p>
-			<h2 id="note-title">One foundation, multiple domains.</h2>
+			<h2 id="note-title">Infrastructure first. Domain second.</h2>
 			<p>
-				FastApiBackbone establishes the reusable backend substrate: asynchronous application structure, database
-				lifecycle, migrations, configuration, logging, and clean extension points. PAssist demonstrates how that
+				FastApiBackbone is the reusable backend substrate: asynchronous application structure, database lifecycle,
+				migrations, configuration, logging, health checks, and clean extension points. PAssist demonstrates how that
 				foundation can support a substantially more complex domain with identity, security, AI provider abstraction,
-				conversations, tools, documents, memory, and multi-tenancy boundaries.
+				conversations, tools, knowledge retrieval, memory, and future multi-user capabilities.
 			</p>
 			<p>
-				This is the engineering direction behind the rest of the portfolio: build infrastructure that remains stable,
-				then compose domain-specific systems on top of it.
+				The distinction matters: FastApiBackbone is intentionally domain-neutral, while PAssist owns product-specific
+				behavior. The result is a reusable engineering foundation that can be carried into other Python backend projects
+				without importing the assumptions of an AI application.
 			</p>
 		</section>
 
